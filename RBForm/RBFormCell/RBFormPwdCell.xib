@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="RBFormPwdCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="48"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="47.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="密码" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wx-K3-5Je">
+                        <rect key="frame" x="14" y="13" width="70" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="EYs-UI-WPJ"/>
+                            <constraint firstAttribute="height" constant="20" id="aRW-md-Bpl"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="14"/>
+                        <color key="textColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tSA-aV-DBa" userLabel="lineView">
+                        <rect key="frame" x="13" y="46.5" width="307" height="1"/>
+                        <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="4Fi-8g-sqK"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="7QF-Us-yP5"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBP-RB-XMK">
+                        <rect key="frame" x="288" y="12" width="20" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="dcZ-tS-Q3a"/>
+                            <constraint firstAttribute="height" constant="22" id="heY-eh-LS2"/>
+                        </constraints>
+                        <state key="normal" image="mine_ico_closeeye"/>
+                        <state key="selected" image="mine_ico_openeye"/>
+                        <connections>
+                            <action selector="pwdBtnClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="TfV-Gf-YDf"/>
+                        </connections>
+                    </button>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wbn-u5-jDA">
+                        <rect key="frame" x="128" y="13" width="150" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="SYq-xE-MFp"/>
+                        </constraints>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="1wx-K3-5Je" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="2YG-TS-hCa"/>
+                    <constraint firstAttribute="trailing" secondItem="tSA-aV-DBa" secondAttribute="trailing" id="6dd-rr-Etk"/>
+                    <constraint firstItem="wbn-u5-jDA" firstAttribute="leading" secondItem="1wx-K3-5Je" secondAttribute="trailing" constant="44" id="SG0-7z-vIZ"/>
+                    <constraint firstItem="wbn-u5-jDA" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="T1C-Q3-DPR"/>
+                    <constraint firstItem="tSA-aV-DBa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="UyU-Cp-DCh"/>
+                    <constraint firstItem="yBP-RB-XMK" firstAttribute="leading" secondItem="wbn-u5-jDA" secondAttribute="trailing" constant="10" id="X7L-83-vIG"/>
+                    <constraint firstItem="1wx-K3-5Je" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="jeb-mC-RLb"/>
+                    <constraint firstAttribute="bottom" secondItem="tSA-aV-DBa" secondAttribute="bottom" id="qud-RU-3O3"/>
+                    <constraint firstItem="yBP-RB-XMK" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="sEE-08-Q6J"/>
+                    <constraint firstAttribute="trailing" secondItem="yBP-RB-XMK" secondAttribute="trailing" constant="12" id="t5v-4D-RTO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="contentTextField" destination="wbn-u5-jDA" id="NsC-2P-KrL"/>
+                <outlet property="pwdBtn" destination="yBP-RB-XMK" id="pxq-nH-xx5"/>
+                <outlet property="textFieldConstraintL" destination="SG0-7z-vIZ" id="40c-yZ-6Hx"/>
+                <outlet property="titleLabel" destination="1wx-K3-5Je" id="r4L-Cf-uVP"/>
+                <outlet property="titleLabelWidth" destination="EYs-UI-WPJ" id="OJq-Tj-SBa"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="mine_ico_closeeye" width="20" height="20"/>
+        <image name="mine_ico_openeye" width="20" height="20"/>
+    </resources>
+</document>
